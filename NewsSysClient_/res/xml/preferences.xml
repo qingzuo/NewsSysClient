@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="设置" >
+
+    <PreferenceCategory
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:summary="设置服务器地址"
+        android:title="服务器" >
+        <EditTextPreference
+            android:defaultValue="http://192.168.1.102:8080/news/"
+            android:key="@string/prekey_serverip"
+            android:summary="设置连接服务器的IP地址"
+            android:title="服务器地址" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="其他" >
+        <PreferenceScreen
+            android:key="suggest_activity"
+            android:summary="向开发团队提供建议"
+            android:title="建议" >
+            <intent
+                android:action="android.intent.action.MAIN"
+                android:targetClass="edu.jsu.newssysclient.ui.menu.SuggestActivity_"
+                android:targetPackage="edu.jsu.newssysclient" />
+        </PreferenceScreen>
+        <PreferenceScreen
+            android:key="help_activity"
+            android:summary="获取帮助"
+            android:title="帮助" >
+            <intent
+                android:action="android.intent.action.MAIN"
+                android:targetClass="edu.jsu.newssysclient.ui.menu.HelpActivity_"
+                android:targetPackage="edu.jsu.newssysclient" />
+        </PreferenceScreen>
+        <PreferenceScreen
+            android:key="about_activity"
+            android:title="关于" >
+            <intent
+                android:action="android.intent.action.MAIN"
+                android:targetClass="edu.jsu.newssysclient.ui.menu.AboutActivity_"
+                android:targetPackage="edu.jsu.newssysclient" />
+        </PreferenceScreen>
+    </PreferenceCategory>
+
+</PreferenceScreen>

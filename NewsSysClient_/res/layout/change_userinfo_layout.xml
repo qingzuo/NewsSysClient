@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="20dp" >
+
+        <!-- 更改密码 -->
+
+        <LinearLayout
+            android:id="@+id/ll_change_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="更改密码:"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/oldPasswd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:hint="旧密码"
+                android:inputType="textPassword" />
+
+            <EditText
+                android:id="@+id/newPasswd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:hint="新密码"
+                android:inputType="textPassword" />
+
+            <EditText
+                android:id="@+id/newPasswd2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:hint="再次输入新密码"
+                android:inputType="textPassword" />
+
+            <Button
+                android:id="@+id/changPwd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/botton_selector2"
+                android:text="更改密码"
+                android:textColor="#FFFFFFFF" />
+        </LinearLayout>
+
+        <!-- 更改头像 -->
+
+        <LinearLayout
+            android:id="@+id/ll_change_avatar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="更改头像" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/takeImage"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/botton_selector2"
+                    android:text="拍照"
+                    android:textColor="#FFFFFFFF" />
+
+                <Button
+                    android:id="@+id/findImage"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/botton_selector2"
+                    android:text="图库"
+                    android:textColor="#FFFFFFFF" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/userAvatar"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="20dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_default_avatar"
+                android:visibility="visible" />
+
+            <Button
+                android:id="@+id/updateAvatar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/botton_selector2"
+                android:text="更新头像"
+                android:textColor="#FFFFFFFF" />
+        </LinearLayout>
+
+        <!-- 更改个性签名和邮箱 -->
+
+        <LinearLayout
+            android:id="@+id/ll_change_signature_mail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="更新用户信息:"
+                android:textStyle="bold" />
+
+            <!-- 邮箱 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:text="邮        箱:" />
+
+                <EditText
+                    android:id="@+id/email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:selectAllOnFocus="true" />
+            </LinearLayout>
+
+            <!-- 个性签名 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:text="个性签名:" />
+
+                <EditText
+                    android:id="@+id/personNote"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:selectAllOnFocus="true" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/updateUserInfo"
+                android:layout_width="match_parent"
+                android:layout_marginTop="8dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/botton_selector2"
+                android:text="更新用户信息"
+                android:textColor="#FFFFFFFF" />
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

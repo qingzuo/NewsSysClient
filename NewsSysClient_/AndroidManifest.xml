@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="edu.jsu.newssysclient"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="14" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <application
+        android:name="edu.jsu.newssysclient.MyApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity android:name="edu.jsu.newssysclient.ui.menu.TestActivity" >
+        </activity>
+
+        <!-- 主要的Activity -->
+
+        <activity
+            android:name="edu.jsu.newssysclient.ui.main.WelcomeActivity_"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="edu.jsu.newssysclient.ui.main.AllTypeNewsActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/StyledIndicators" >
+        </activity>
+        <activity
+            android:name="edu.jsu.newssysclient.ui.main.ShowNewsActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Holo.Light" >
+        </activity>
+        <activity
+            android:name="edu.jsu.newssysclient.ui.main.ShowCommentActivity"
+            android:label="@string/comment"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Holo.Light" >
+        </activity>
+        <activity
+            android:name="edu.jsu.newssysclient.ui.main.ImageNewsActivity_"
+            android:screenOrientation="portrait"
+            android:theme="@style/ImageViewTheme" >
+        </activity>
+        <!-- 查看图片新闻activity -->
+        <activity
+            android:name="edu.jsu.newssysclient.ui.main.GalleryUrlActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ImageViewTheme" >
+        </activity>
+        <!-- 查看一张图片activity -->
+        <activity
+            android:name="edu.jsu.newssysclient.ui.main.ShowImageByUrlActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ImageViewTheme" >
+        </activity>
+        <!-- 订阅界面 -->
+        <activity
+            android:name="edu.jsu.newssysclient.ui.main.SubscriptionActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Holo.Light" >
+        </activity>
+        <!-- 所有类型视频列表activity -->
+        <activity
+            android:name="edu.jsu.newssysclient.ui.main.AllTypeVideoActivity"
+            android:screenOrientation="portrait"
+            android:label="视频"
+            android:theme="@style/StyledIndicators" >
+        </activity>
+        <!-- 播放视频activity -->
+        <activity
+            android:name="edu.jsu.newssysclient.ui.main.VideoPlayActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Holo" >
+        </activity>
+        <!-- 查看一个url Activity -->
+        <activity
+            android:name="edu.jsu.newssysclient.ui.main.WebViewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Holo.Light" >
+        </activity>
+        <!-- 视频开源控件 -->
+        <activity
+            android:name="io.vov.vitamio.activity.InitActivity"
+            android:configChanges="orientation|screenSize|smallestScreenSize|keyboard|keyboardHidden"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+
+        <!-- 侧边栏菜单Activity -->
+
+        <activity
+            android:name="edu.jsu.newssysclient.ui.menu.CustomNewsTypesActivity"
+            android:label="@string/custome"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Holo.Light" >
+        </activity>
+        <activity
+            android:name="edu.jsu.newssysclient.ui.menu.LoginActivity_"
+            android:label="@string/login"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Holo.Light" >
+        </activity>
+        <activity
+            android:name="edu.jsu.newssysclient.ui.menu.RegisterActivity_"
+            android:label="@string/register"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Holo.Light" >
+        </activity>
+        <activity
+            android:name="edu.jsu.newssysclient.ui.menu.AboutActivity_"
+            android:label="@string/about"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Holo.Light" >
+        </activity>
+        <activity
+            android:name="edu.jsu.newssysclient.ui.menu.CollectActivity_"
+            android:label="@string/collect"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Holo.Light" >
+        </activity>
+        <activity
+            android:name="edu.jsu.newssysclient.ui.menu.HelpActivity_"
+            android:label="@string/help"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Holo.Light" >
+        </activity>
+        <activity
+            android:name="edu.jsu.newssysclient.ui.menu.SettingActivity"
+            android:label="@string/setting"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Holo.Light" >
+        </activity>
+        <activity
+            android:name="edu.jsu.newssysclient.ui.menu.ShowUserInfoActivity_"
+            android:label="@string/user_info"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Holo.Light" >
+        </activity>
+        <activity
+            android:name="edu.jsu.newssysclient.ui.menu.ChangeUserInfoActivity_"
+            android:label="@string/change_user_info"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Holo.Light" >
+        </activity>
+        <activity
+            android:name="edu.jsu.newssysclient.ui.menu.SuggestActivity_"
+            android:label="@string/suggest"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Holo.Light" >
+        </activity>
+    </application>
+
+</manifest>

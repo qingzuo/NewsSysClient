@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#FFE0E0E0"
+        android:orientation="vertical" >
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#F7F7F7" >
+
+            <LinearLayout
+                android:id="@+id/ll_show_news"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:id="@+id/news_box"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="18dp"
+                    android:background="#F7F7F7"
+                    android:orientation="vertical" >
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_news_bottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="#E9E9E9"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="20dp"
+                        android:text="用户评论"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="18dp" >
+
+                        <TextView
+                            android:id="@+id/tv_follow_username"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:singleLine="true"
+                            android:text="username"
+                            android:textColor="#5191D2"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tv_follow_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:singleLine="true"
+                            android:text="time"
+                            android:textColor="#828282"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tv_follow_content"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_below="@+id/tv_follow_username"
+                            android:layout_marginTop="12dp"
+                            android:text="contnet"
+                            android:textColor="#545454"
+                            android:textSize="18sp" />
+                    </RelativeLayout>
+
+                    <Button
+                        android:id="@+id/bt_follow_showmore"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="18sp"
+                        android:text="查看更多" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="8dp" >
+
+        <EditText
+            android:id="@+id/et_comment_content"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="写评论" />
+
+        <Button
+            android:id="@+id/ib_comment_send"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_margin="8dp"
+            android:background="@drawable/ic_action_send_now" />
+    </LinearLayout>
+
+</LinearLayout>

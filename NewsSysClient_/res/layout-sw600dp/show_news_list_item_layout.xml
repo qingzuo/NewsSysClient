@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp" >
+
+    <!-- 新闻ListView的item布局 -->
+
+
+    <!-- logo -->
+
+    <ImageView
+        android:id="@+id/iv_news_logo"
+        android:layout_width="140dp"
+        android:layout_height="100dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="8dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_default_lite_image" />
+
+    <!-- 标题 -->
+
+    <TextView
+        android:id="@+id/tv_news_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/iv_news_logo"
+        android:singleLine="true"
+        android:textColor="#303030"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <!-- 简介 -->
+
+    <TextView
+        android:id="@+id/tv_news_intro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_news_title"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@+id/iv_news_logo"
+        android:lines="2"
+        android:textColor="#808080"
+        android:textSize="18sp" />
+
+    <!-- 跟帖 -->
+
+    <TextView
+        android:id="@+id/tv_news_followup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:text="followup"
+        android:textColor="#777"
+        android:textSize="16sp" />
+
+</RelativeLayout>

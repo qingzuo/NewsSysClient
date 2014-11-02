@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <!-- 照片墙 -->
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_menu_background3" />
+
+        <!-- 用户基本信息 -->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp" >
+
+            <ImageView
+                android:id="@+id/userAvatar"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginRight="12dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_default_avatar"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/mName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/userAvatar"
+                android:singleLine="true"
+                android:text="用户名"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/userSignature"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/mName"
+                android:layout_toRightOf="@+id/userAvatar"
+                android:textColor="#FF848686" />
+        </RelativeLayout>
+
+        <!-- 其他信息 -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:background="@drawable/shape"
+            android:orientation="vertical" >
+
+            <!-- 邮件 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="12dp" >
+
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:text="邮箱"
+                    android:textColor="#FF848686" />
+
+                <TextView
+                    android:id="@+id/tv_user_email"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="未绑定"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#FF000000" />
+
+            <!-- 评论 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="12dp" >
+
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:text="评论"
+                    android:textColor="#FF848686" />
+
+                <TextView
+                    android:id="@+id/tv_user_comment_time"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="0次评论"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#FF000000" />
+
+            <!-- 收藏 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="12dp" >
+
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:text="收藏"
+                    android:textColor="#FF848686" />
+
+                <TextView
+                    android:id="@+id/tv_user_collect_time"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="0个收藏"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- 编辑按钮 -->
+
+        <Button
+            android:id="@+id/mChangeInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/botton_selector2"
+            android:text="编辑签名邮箱"
+            android:textColor="#FFFFFFFF" />
+
+        <!-- 更改头像 -->
+
+        <Button
+            android:id="@+id/mChangeAvatar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/botton_selector2"
+            android:text="更改头像"
+            android:textColor="#FFFFFFFF" />
+
+        <!-- 更改密码 -->
+
+        <Button
+            android:id="@+id/mChangePwd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/botton_selector2"
+            android:text="更改密码"
+            android:textColor="#FFFFFFFF" />
+
+        <!-- 注销按钮 -->
+
+        <Button
+            android:id="@+id/mLogout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/botton_selector"
+            android:text="注销"
+            android:textColor="#FFFFFFFF" />
+    </LinearLayout>
+
+</ScrollView>

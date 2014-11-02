@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_menu_background2"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/rl_menu_top"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:orientation="vertical"
+        android:gravity="center" >
+
+        <ImageView
+            android:id="@+id/iv_menu_top_head"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:onClick="MoreUserInfo"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_default_avatar" />
+
+        <TextView
+            android:id="@+id/tv_menu_top_name"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textColor="#ffffffff"
+            android:layout_height="wrap_content"
+            android:text="未登录" />
+    </LinearLayout>
+    
+    <View android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#ffCC0000"/>
+
+    <ListView
+        android:id="@+id/lv_menu_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </ListView>
+
+</LinearLayout>

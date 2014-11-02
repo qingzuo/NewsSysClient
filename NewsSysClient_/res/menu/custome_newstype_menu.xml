@@ -1,0 +1,11 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <!-- 下载 -->
+    <item
+        android:id="@+id/action_sure"
+        android:orderInCategory="100"
+        android:icon="@drawable/ic_action_accept"
+        android:showAsAction="always"
+        android:title="确定"/>
+
+</menu>
